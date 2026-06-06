@@ -9,7 +9,7 @@ const resumeUrl = "/Resume%20-%20Matteo%20Coffman.pdf";
 
 const stats = [
   { label: "Professional experience", value: "1.5 yrs" },
-  { label: "Active builds", value: "FretNot · Fyte · Clarence James" },
+  { label: "Active builds", value: "FretNot · Fyte · ApplyTrack" },
   { label: "Core stack", value: "TypeScript · React · Expo · AWS" },
 ];
 
@@ -57,7 +57,7 @@ const skills = [
   "Next.js",
   "Python",
   "SQL / DynamoDB",
-  "AWS (Lambda, DynamoDB, CloudWatch)",
+  "AWS (Lambda, DynamoDB, Cognito, CloudWatch)",
   "Azure & Docker",
   "Git/GitHub & JIRA",
 ];
@@ -84,12 +84,24 @@ const projects = [
     stack: ["Expo", "React Native", "React Navigation", "The Odds API"],
   },
   {
-    title: "Clarence James · Band Hub",
+    title: "ApplyTrack · Job Application Pipeline",
     description:
-      "React Router site for my band with hero video embeds, Spotify player widgets, social promos, and a lightweight booking/contact flow.",
+      "Kanban-style job tracker with Cognito sign-up, a JWT-secured serverless API, and per-user DynamoDB storage—users move applications across Saved, Applied, Interview, Offer, and Rejected columns.",
     impact:
-      "Centralizes shows, listening links, and merch teasers so booking teams have a single EPK-style destination instead of juggling socials.",
-    stack: ["React", "React Router", "FontAwesome", "YouTube & Spotify embeds"],
+      "Deployed on Vercel with AWS SAM backend so anyone can create an account and track applications across devices; built to mirror the TypeScript + Lambda + DynamoDB patterns from my Call Box work.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Amazon Cognito",
+      "AWS Lambda",
+      "DynamoDB",
+      "API Gateway",
+      "SAM",
+    ],
+    links: [
+      { label: "Launch app", href: "https://applytrack-flame.vercel.app" },
+      { label: "View repo", href: "https://github.com/MatteoCoffman/applytrack" },
+    ],
   },
 ];
 
@@ -160,8 +172,8 @@ export default function Home() {
               <p className="text-lg text-slate-300">
                 I keep TypeScript at the center—pairing React, AWS Lambda, and data work in SQL/DynamoDB to
                 modernize call intelligence products. Currently shipping features for Humanatic 2.0, Car Wars,
-                and CARI at Call Box. Nights and weekends I’m leveling up personal builds like FretNot, Fyte, and the
-                Clarence James site to showcase full-stack craft.
+                and CARI at Call Box. Nights and weekends I’m leveling up personal builds like FretNot, ApplyTrack, and
+                Fyte to showcase full-stack craft.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
