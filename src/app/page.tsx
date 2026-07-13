@@ -9,8 +9,8 @@ const resumeUrl = "/Resume%20-%20Matteo%20Coffman.pdf";
 
 const stats = [
   { label: "Professional experience", value: "1.5 yrs" },
-  { label: "Active builds", value: "FretNot · Fyte · ApplyTrack" },
-  { label: "Core stack", value: "TypeScript · React · Expo · AWS" },
+  { label: "Active builds", value: "Mira · FretNot · Teachers To You" },
+  { label: "Core stack", value: "TypeScript · React · Python · AWS" },
 ];
 
 const experience = [
@@ -56,13 +56,35 @@ const skills = [
   "Vue.js",
   "Next.js",
   "Python",
+  "LangGraph",
   "SQL / DynamoDB",
-  "AWS (Lambda, DynamoDB, Cognito, CloudWatch)",
+  "AWS (Lambda, DynamoDB, CDK, CloudWatch)",
+  "Twilio Voice",
   "Azure & Docker",
   "Git/GitHub & JIRA",
 ];
 
 const projects = [
+  {
+    title: "Mira · AI Phone Receptionist",
+    description:
+      "Agentic inbound receptionist for trades businesses: LangGraph + OpenAI tools answer live calls over Twilio ConversationRelay (Deepgram STT + ElevenLabs TTS), book appointments from per-tenant schedules, escalate true emergencies, and run a post-call summary pipeline into DynamoDB.",
+    impact:
+      "Public demo line with IVR across three sample shops; Next.js marketing site on Vercel with a live demo owner console reading calls and appointments from the API. Infra as code via AWS CDK (Lambda Function URL, WebSocket API, Secrets Manager).",
+    stack: [
+      "Python",
+      "LangGraph",
+      "Twilio",
+      "AWS CDK",
+      "DynamoDB",
+      "Next.js",
+      "TypeScript",
+    ],
+    links: [
+      { label: "Launch site", href: "https://mira-website-psi.vercel.app" },
+      { label: "View repo", href: "https://github.com/MatteoCoffman/mira-ai" },
+    ],
+  },
   {
     title: "FretNot · Guitar Theory Companion",
     description:
@@ -76,12 +98,16 @@ const projects = [
     ],
   },
   {
-    title: "Fyte · UFC Odds Companion",
+    title: "Teachers To You · Lesson Booking Site",
     description:
-      "Expo/React Native app that pulls live fight odds from The Odds API, filters by sportsbook, and opens bet tickets with modal calculators for stake/return math.",
+      "Custom marketing and booking site for an Austin guitar/bass lesson studio: scroll-driven homepage, teacher profiles, travel-fee checks for in-home lessons, and Square-powered booking for single lessons plus 4-week packages.",
     impact:
-      "Replaced spreadsheet workflows for friends who track parlays—bets persist locally, bookmaker filtering speeds scanning, and calculator logic translates American odds for casual bettors.",
-    stack: ["Expo", "React Native", "React Navigation", "The Odds API"],
+      "Replaces ad-hoc Instagram booking with a branded Next.js experience—Square embed for one-offs, Bookings API for packages, and server-side drive-time logic so travel fees stay accurate without exposing teacher addresses.",
+    stack: ["Next.js", "TypeScript", "Tailwind", "Square", "Vercel"],
+    links: [
+      { label: "Launch site", href: "https://teachers-to-you.vercel.app" },
+      { label: "View repo", href: "https://github.com/MatteoCoffman/teachers-to-you" },
+    ],
   },
   {
     title: "ApplyTrack · Job Application Pipeline",
@@ -172,8 +198,8 @@ export default function Home() {
               <p className="text-lg text-slate-300">
                 I keep TypeScript at the center—pairing React, AWS Lambda, and data work in SQL/DynamoDB to
                 modernize call intelligence products. Currently shipping features for Humanatic 2.0, Car Wars,
-                and CARI at Call Box. Nights and weekends I’m leveling up personal builds like FretNot, ApplyTrack, and
-                Fyte to showcase full-stack craft.
+                and CARI at Call Box. Nights and weekends I’m building Mira, an agentic AI phone receptionist,
+                plus personal tools like FretNot and Teachers To You.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
